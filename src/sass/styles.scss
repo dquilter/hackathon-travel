@@ -9,7 +9,11 @@ body {
 	font: normal 16px Verdana;
 }
 
-
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .panel {
 	display: none;
@@ -92,4 +96,5 @@ body {
 	text-shadow: none;
 }
 
-@import 'page/results'
+@import 'page/results';
+@import 'page/choices';
