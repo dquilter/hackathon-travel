@@ -1,27 +1,127 @@
-<section class="panel active-panel" data-order="0">
+<section class="panel" data-order="3">
 	<div class="row">
 		<div class="col-md-8">
-			<h2>Piggy wants to know when you are going</h2>
-			<p><input name="daterange" type="text"/></p>
+			<h2>Piggy wants to know when you are going:</h2>
+			<div class="calendar-wrapper" id="calendar-wrapper">
+				<table class="table">
+				   <thead>
+				      <tr>
+				         <th class="prev available"><i class="fa fa-chevron-left glyphicon glyphicon-chevron-left"></i></th>
+				         <th colspan="5" class="month">May 2016</th>
+				         <th></th>
+				      </tr>
+				      <tr>
+				         <th>Su</th>
+				         <th>Mo</th>
+				         <th>Tu</th>
+				         <th>We</th>
+				         <th>Th</th>
+				         <th>Fr</th>
+				         <th>Sa</th>
+				      </tr>
+				   </thead>
+				   <tbody>
+				      <tr>
+				         <td class="weekend off available" data-title="r0c0">30</td>
+				         <td class="off available" data-title="r0c1">31</td>
+				         <td class="off available" data-title="r0c2">1</td>
+				         <td class="off available" data-title="r0c3">2</td>
+				         <td class="off available" data-title="r0c4">3</td>
+				         <td class="off available" data-title="r0c5">4</td>
+				         <td class="off available" data-title="r0c6">5</td>
+				      </tr>
+				      <tr>
+				         <td class="off available" data-title="r1c0">6</td>
+				         <td class="off available" data-title="r1c1">7</td>
+				         <td class="off available" data-title="r1c2">8</td>
+				         <td class="off available" data-title="r1c3">9</td>
+				         <td class="off available" data-title="r1c4">10</td>
+				         <td class="off available" data-title="r1c5">11</td>
+				         <td class="off available" data-title="r1c6">12</td>
+				      </tr>
+				      <tr>
+				         <td class="off available" data-title="r2c0">13</td>
+				         <td class="off available" data-title="r2c1">14</td>
+				         <td class="off available" data-title="r2c2">15</td>
+				         <td class="off available" data-title="r2c3">16</td>
+				         <td class="off available" data-title="r2c4">17</td>
+				         <td class="off available" data-title="r2c5">18</td>
+				         <td class="off available" data-title="r2c6">19</td>
+				      </tr>
+				      <tr>
+				         <td class="off available" data-title="r3c0">20</td>
+				         <td class="available start-date" data-title="r3c1">21</td>
+				         <td class="available end-date" data-title="r3c2">22</td>
+				         <td class="available" data-title="r3c3">23</td>
+				         <td class="available" data-title="r3c4">24</td>
+				         <td class="available" data-title="r3c5">25</td>
+				         <td class="weekend available" data-title="r3c6">26</td>
+				      </tr>
+				      <tr>
+				         <td class="weekend available" data-title="r4c0">27</td>
+				         <td class="available" data-title="r4c1">28</td>
+				         <td class="available" data-title="r4c2">29</td>
+				         <td class="available" data-title="r4c3">30</td>
+				         <td class="available" data-title="r4c4">31</td>
+				         <td class="available" data-title="r4c5">1</td>
+				         <td class="weekend available" data-title="r4c6">2</td>
+				      </tr>
+				      <tr>
+				         <td class="weekend  available" data-title="r5c0">3</td>
+				         <td class=" available" data-title="r5c1">4</td>
+				         <td class=" available" data-title="r5c2">5</td>
+				         <td class=" available" data-title="r5c3">6</td>
+				         <td class=" available" data-title="r5c4">7</td>
+				         <td class=" available" data-title="r5c5">8</td>
+				         <td class="weekend available" data-title="r5c6">9</td>
+				      </tr>
+				   </tbody>
+				</table>
+			</div>
+			<p class="ctr-container">
+				<button class="btn ctrl-btn ctrl-next">Select dates</button>
+			</p>
 			<p class="ctr-container">
 				<button class="btn ctrl-btn ctrl-prev">Previous screen</button>
-				<button class="btn ctrl-btn ctrl-next">Next screen</button>
 			</p>
 		</div>
 	</div>
 </section>
 <script>
-	$(document).ready(function(){
-		$('input[name="daterange"]').daterangepicker(
-		{
-		    locale: {
-		      format: 'YYYY-MM-DD'
-		    },
-		    startDate: '2013-01-01',
-		    endDate: '2013-12-31'
-		}, 
-		function(start, end, label) {
-		    console.log("A new date range was chosen: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-		});
-	})
+	$(function(){
+		$('.calendar-wrapper > table').find('td').click(function(){
+			$(this).addClass('selected');
+			if($(this).is('.end-date'))
+				$('.selected').addClass('active');
+		})
+	});
 </script>
+<style>
+	.calendar-wrapper {
+		position: relative;
+	}
+	.table>tbody>tr>td {
+		cursor: pointer;
+	}
+	.table>tbody>tr>td.off {
+		color: lightgray;
+	}
+	.table>tbody>tr>td.off:hover {
+		background-color: white;
+	}
+	.table>tbody>tr>td:hover {
+		background-color: lightgray;
+	}
+	.table>tbody>tr>td.selected {
+		background-color: pink;
+	}
+	.table>tbody>tr>td.selected.active {
+		background-color: pink;
+	}
+	.daterangepicker {
+		position: relative;
+	}
+	.ui-loader {
+		display: none
+	}
+</style>
