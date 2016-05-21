@@ -14,7 +14,16 @@
 		display: block;
 		padding: 8px 15px;
 		color: #333;
-		
+		span {
+			display: block;
+		}
+		.time {
+			font-size: 0.8em;
+			color: #109cda;
+		}
+		.title {
+			font-size: 1.1em;
+		}
 	}
 }
 
