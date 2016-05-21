@@ -33,7 +33,13 @@ var hack = {
 		}
 	},
 	flipBoard: function() {
+		var counter = 0,
+			counterMax = 5;
 	    $(".buddy").on("swiperight",function(){
+	    	counter++;
+	    	if (counter === counterMax) {
+				hack.moveToPanel(1);
+	    	}
 	      $(this).addClass('rotate-left').delay(700).fadeOut(1);
 	      $('.buddy').find('.status').remove();
 
@@ -46,6 +52,10 @@ var hack = {
 	    });  
 
 	   $(".buddy").on("swipeleft",function(){
+    	counter++;
+    	if (counter === counterMax) {
+			hack.moveToPanel(1);
+    	}
 	    $(this).addClass('rotate-right').delay(700).fadeOut(1);
 	    $('.buddy').find('.status').remove();
 	    $(this).append('<div class="status dislike">NO!</div>');
