@@ -5,8 +5,66 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<p>Lets get hacking!</p>
+
 		</div>
 	</div>
+	<section class="panel active-panel splash" data-order="0">
+		<div class="row">
+			<div class="col-md-8">
+				<h1>The Pig Project</h1>
+				<p><a href="">LOGO</a></p>
+				<h2>Hello traveler! Where are you planning to go ?</h2>
+				<p><label for="destination" class="hidden">Travel to:</label><input name="destination" id="destinationinput" type="text" placeholder="Enter city name" value="" /></p>
+				<h2>And when?</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<p><label for="date-from" class="">Depart on the:</label><input name="date-from" type="date" placeholder="Pick a date" value="" />
+					</div>
+					<div class="col-md-6">
+						<p><label for="date-to" class="">Return on the:</label><input name="date-to" type="date" placeholder="Pick a date" value="" />
+					</div>
+				</div>
+				</p>
+				<p class="ctr-container"><button class="ctrl-btn ctrl-next">Next screen</button></p>
+			</div>
+		</div>
+    </section>
+	<section class="panel" data-order="1">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="mood-flipboard">
+					<div class="buddy" style="display:block;">
+						<div class="avatar">
+							Are you an adventurer?
+						</div>
+					</div>
+					<div class="buddy">
+						<div class="avatar">
+							Are you boring?
+						</div>
+					</div>
+					<div class="buddy">
+						<div class="avatar">
+							Are you a girl?
+						</div>
+					</div>
+					<div class="buddy">
+						<div class="avatar">
+							Who is who?
+						</div>
+					</div>
+  				</div>
+  				<p><button class="btn">Yes</button><button class="btn">No</button></p>
+
+				</div>
+
+				<p class="ctr-container">
+					<button class="btn ctrl-btn ctrl-prev">Previous screen</button>
+					<button class="btn ctrl-btn ctrl-next">Next screen</button>
+				</p>
+			</div>
+		</div>
+    </section>
 </div>
 
 <!--(bake ../includes/footer.html)-->
