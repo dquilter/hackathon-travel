@@ -2,35 +2,25 @@
 
 <div class="container">
 	<!--(bake ../includes/header.html)-->
-	<div class="row">
-		<div class="col-sm-12">
-			<p>Lets get hacking!</p>
 
-		</div>
-	</div>
-	<section class="panel splash" data-order="2">
+	<section class="panel active-panel splash" data-order="0">
 		<div class="row">
-			<div class="col-md-8">
-				<h1>The Pig Project</h1>
-				<p><a href="">LOGO</a></p>
+			<div class="col-md-12">
 				<h2>Hello traveler! Where are you planning to go ?</h2>
-				<p><label for="destination" class="hidden">Travel to:</label><input name="destination" id="destinationinput" type="text" placeholder="Enter city name" value="" /></p>
+				<label for="destination" class="hidden">Travel to:</label>
+				<input name="destination" id="destinationinput" type="text" placeholder="Enter city name" value="" />
 				<h2>And when?</h2>
-				<div class="row">
-					<div class="col-md-6">
-						<p><label for="date-from" class="">Depart on the:</label><input name="date-from" type="date" placeholder="Pick a date" value="" />
-					</div>
-					<div class="col-md-6">
-						<p><label for="date-to" class="">Return on the:</label><input name="date-to" type="date" placeholder="Pick a date" value="" />
-					</div>
-				</div>
+				<label for="date-from" class="">Depart on the:</label>
+				<input name="date-from" type="date" placeholder="Pick a date" value="" />
+				<label for="date-to" class="">Return on the:</label>
+				<input name="date-to" type="date" placeholder="Pick a date" value="" />
+				<p class="ctr-container">
+					<button class="ctrl-btn ctrl-next">Next screen</button>
 				</p>
-				<p class="ctr-container"><button class="ctrl-btn ctrl-next">Next screen</button></p>
 			</div>
 		</div>
-    </section>
+	</section>
 	<!--(bake ../includes/moodboard.html)-->
-
 	<!--(bake ../includes/calendar.html)-->
 	<!--(bake ../includes/results.html)-->
 </div>

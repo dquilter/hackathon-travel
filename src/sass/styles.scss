@@ -4,9 +4,16 @@
 ::-moz-selection {
   background: #fff; /* Gecko Browsers */
 }
+
+body {
+	font: normal 16px Verdana;
+}
+
+
+
 .panel {
 	display: none;
-    padding: 15px;
+    padding: 15px 0;
 }
 .active-panel {
 	display: block;
@@ -84,3 +91,5 @@
 	left: 40px;
 	text-shadow: none;
 }
+
+@import 'page/results'
