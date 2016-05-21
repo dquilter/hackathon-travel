@@ -2,6 +2,7 @@ var hack = {
 	init: function() {
 		console.log('Lets get hacking!');
 		hack.flipBoard();
+		hack.closeSplashScreen();
 		$('.ctrl-btn').click(function(){
 			if ($(this).is('.ctrl-next')) {
 				hack.moveToPanel(1);
@@ -18,7 +19,9 @@ var hack = {
 		var next = val === undefined ? parseInt(currentPanel.attr('data-order'), 10) + step : val;
 		console.log(next);
 		var nextPanel = $('.panel[data-order=' + next + ']');
-
+		if (next===2) {
+			hack.flipBoard();
+		}
 		if (nextPanel.length) {
 			currentPanel.fadeOut('slow', function() {
 				nextPanel.fadeIn('slow', function() {
@@ -32,6 +35,11 @@ var hack = {
 			});
 		}
 	},
+	closeSplashScreen: function() {
+    	setTimeout(function() {
+            hack.moveToPanel(1);
+        }, 3000);
+    },
 	flipBoard: function() {
 			var counter = 0,
 			counterMax = 5;
