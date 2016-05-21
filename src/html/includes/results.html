@@ -1,30 +1,64 @@
-	<section class="panel" data-order="3">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="results-date">
-					<p>Day 1 - Sat 21st May 2016</p>
-				</div>
-				<div class="results-activites">
-					<ul>
-						<li>Sip Vermouth</li>
-						<li>PortAventura World</li>
-					</ul>
-				</div>
-				<div class="results-date">
-					<p>Day 2 - Sat 22nd May 2016</p>
-				</div>
-				<div class="results-activites">
-					<ul>
-						<li>Gaudi Architecture</li>
-						<li>Ferrari Land</li>
-					</ul>
-				</div>
-				
-				
-				<p class="ctr-container">
-					<button class="btn ctrl-btn ctrl-prev">Previous screen</button>
-					<button class="btn ctrl-btn ctrl-next">Next screen</button>
-				</p>
+<section class="panel active-panel" data-order="3">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="results-date">
+				<p>Day 1 - Sat 21st May 2016</p>
 			</div>
+			<div class="results-activites">
+				<ul>
+					<li>
+						<a href="#" data-toggle="modal" data-target=".modal" data-title="Sip Vermouth in Morro Fi" data-copy="Vermouth is Barcelona’s latest go-to aperitif. On-trend twenty-somethings can be found at this garage bar sipping on the house vermouth and snacking on olives and potato chips.">Sip Vermouth in Morro Fi</a>
+					</li>
+					<li><a href="#" data-toggle="modal" data-target=".modal" data-title="PortAventura World" data-copy="Move over Disney, PortAventura is the place to be for rollercoasters, rides and water slides. You’ve got 3 parks to choose from including the brand new Ferrari Land!">PortAventura World</a>
+					</li>
+				</ul>
+			</div>
+			<div class="results-date">
+				<p>Day 2 - Sat 22nd May 2016</p>
+			</div>
+			<div class="results-activites">
+				<ul>
+					<li><a href="#" data-toggle="modal" data-target=".modal" data-title="Gaudi Architecture" data-copy="You can’t come to Barcelona and not visit Gaudi’s architectural masterpieces. Take a tour of the highlights including the Sagrada Familia basilica, Casa Batlo and Park Guel.">Gaudi Architecture</a>
+					</li>
+					<li><a href="#" data-toggle="modal" data-target=".modal" data-title="Ferrari Land" data-copy="A Ferrari themed amusement park? Yep, we don’t really believe it either. Call it the Motorhead’s Mecca with rides and attractions all based on the classic car.">Ferrari Land</a>
+					</li>
+				</ul>
+			</div>
+
+
+			<p class="ctr-container">
+				<button class="btn ctrl-btn ctrl-prev">Previous screen</button>
+				<button class="btn ctrl-btn ctrl-next">Next screen</button>
+			</p>
 		</div>
-    </section>
+	</div>
+	<div class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					<p>Modal body</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+</section>
+
+
+<script>
+$('.modal').on('show.bs.modal', function (event) {
+	var title = $(event.relatedTarget).attr('data-title');
+	var copy = $(event.relatedTarget).attr('data-copy');
+	var modal = $(this);
+	modal.find('.modal-title').text(title);
+	modal.find('.modal-body p').text(copy);
+})
+</script>

@@ -5,9 +5,13 @@
 	}
 	li {
 		list-style-type: none;
-		padding: 8px 15px;
 		margin: 0 0 10px;
 		border: 1px solid #000;
+	}
+	a {
+		display: block;
+		padding: 8px 15px;
+		
 	}
 }
 
@@ -19,4 +23,8 @@
 	p {
 		margin: 0;
 	}
+}
+
+.modal-dialog {
+	margin: 0;
 }
