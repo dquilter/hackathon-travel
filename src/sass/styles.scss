@@ -6,7 +6,7 @@
 }
 
 body {
-	font: normal 16px Verdana;
+	font: normal 16px Calibri;
 	background: url('../img/bg.jpg') no-repeat top center;
 	background-size: cover;
 }
@@ -17,6 +17,13 @@ body {
   clear: both;
 }
 
+.logo {
+	width: 80px;
+	margin: 30px auto 0;
+	img {
+		width: 100%;
+	}
+}
 .ctrl-btn {
 	width: 100%;
 	padding: 10px 15px;
@@ -55,7 +62,7 @@ body {
 	color: #fff;
 	width: 300px;
 	height: 300px;
-	top: 100px;
+	top: 0;
 	left: 20px;
 	position: absolute;
 	cursor: pointer;
@@ -115,6 +122,39 @@ body {
 	top: 50px;
 	left: 40px;
 	text-shadow: none;
+}
+
+.mood-flipboard {
+	width: 325px;
+	height: 325px;
+}
+.where-panel {
+	h2 {
+		text-align: center;
+	}
+	img {
+		display: block;
+		width: 150px;
+		margin: 0 auto 20px;
+	}
+}
+.calendar-panel {
+	h2 {
+		text-align: center;
+	}
+	.calendar-wrapper {
+		margin-top: 30px; 
+		background-color: #FFF;
+		text-align: center;
+	}
+	th {
+		text-align: center;
+	}
+}
+.mood-panel {
+	h2 {
+		text-align: center;
+	}	
 }
 
 @import 'page/results';
