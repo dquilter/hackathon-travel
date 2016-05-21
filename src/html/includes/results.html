@@ -7,9 +7,9 @@
 			<div class="results-activites">
 				<ul>
 					<li>
-						<a href="#" data-toggle="modal" data-target=".modal" data-title="Sip Vermouth in Morro Fi" data-copy="Vermouth is Barcelona’s latest go-to aperitif. On-trend twenty-somethings can be found at this garage bar sipping on the house vermouth and snacking on olives and potato chips.">Sip Vermouth in Morro Fi</a>
+						<a href="#" data-toggle="modal" data-target=".modal" data-title="Sip Vermouth in Morro Fi" data-copy="Vermouth is Barcelona’s latest go-to aperitif. On-trend twenty-somethings can be found at this garage bar sipping on the house vermouth and snacking on olives and potato chips." data-address="Barcelona">Sip Vermouth in Morro Fi</a>
 					</li>
-					<li><a href="#" data-toggle="modal" data-target=".modal" data-title="PortAventura World" data-copy="Move over Disney, PortAventura is the place to be for rollercoasters, rides and water slides. You’ve got 3 parks to choose from including the brand new Ferrari Land!">PortAventura World</a>
+					<li><a href="#" data-toggle="modal" data-target=".modal" data-title="PortAventura World" data-copy="Move over Disney, PortAventura is the place to be for rollercoasters, rides and water slides. You’ve got 3 parks to choose from including the brand new Ferrari Land!" data-address="Barcelona">PortAventura World</a>
 					</li>
 				</ul>
 			</div>
@@ -18,9 +18,9 @@
 			</div>
 			<div class="results-activites">
 				<ul>
-					<li><a href="#" data-toggle="modal" data-target=".modal" data-title="Gaudi Architecture" data-copy="You can’t come to Barcelona and not visit Gaudi’s architectural masterpieces. Take a tour of the highlights including the Sagrada Familia basilica, Casa Batlo and Park Guel.">Gaudi Architecture</a>
+					<li><a href="#" data-toggle="modal" data-target=".modal" data-title="Gaudi Architecture" data-copy="You can’t come to Barcelona and not visit Gaudi’s architectural masterpieces. Take a tour of the highlights including the Sagrada Familia basilica, Casa Batlo and Park Guel." data-address="Barcelona">Gaudi Architecture</a>
 					</li>
-					<li><a href="#" data-toggle="modal" data-target=".modal" data-title="Ferrari Land" data-copy="A Ferrari themed amusement park? Yep, we don’t really believe it either. Call it the Motorhead’s Mecca with rides and attractions all based on the classic car.">Ferrari Land</a>
+					<li><a href="#" data-toggle="modal" data-target=".modal" data-title="Ferrari Land" data-copy="A Ferrari themed amusement park? Yep, we don’t really believe it either. Call it the Motorhead’s Mecca with rides and attractions all based on the classic car." data-address="Barcelona">Ferrari Land</a>
 					</li>
 				</ul>
 			</div>
@@ -44,7 +44,13 @@
 					<h4 class="modal-title">Modal title</h4>
 				</div>
 				<div class="modal-body">
-					<p>Modal body</p>
+					<p><strong>What?</strong></p>
+					<p class="copy">Modal body</p>
+					<p><strong>Where?</strong></p>
+					<p class="address">Address</p>
+					<p><strong>Find out more</strong></p>
+					<p><a href="">Website</a></p>
+					<p><a href="">Telephone</a></p>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -62,8 +68,10 @@
 $('.modal').on('show.bs.modal', function (event) {
 	var title = $(event.relatedTarget).attr('data-title');
 	var copy = $(event.relatedTarget).attr('data-copy');
+	var address = $(event.relatedTarget).attr('data-address');
 	var modal = $(this);
 	modal.find('.modal-title').text(title);
-	modal.find('.modal-body p').text(copy);
+	modal.find('.modal-body .copy').text(copy);
+	modal.find('.modal-body .address').text(address);
 })
 </script>
