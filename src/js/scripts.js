@@ -33,12 +33,13 @@ var hack = {
 		}
 	},
 	flipBoard: function() {
-		var counter = 0,
+			var counter = 0,
 			counterMax = 5;
 	    $(".buddy").on("swiperight",function(){
 	    	counter++;
 	    	if (counter === counterMax) {
 				hack.moveToPanel(1);
+				counter = 0;
 	    	}
 	      $(this).addClass('rotate-left').delay(700).fadeOut(1);
 	      $('.buddy').find('.status').remove();
@@ -55,6 +56,7 @@ var hack = {
     	counter++;
     	if (counter === counterMax) {
 			hack.moveToPanel(1);
+			counter = 0;
     	}
 	    $(this).addClass('rotate-right').delay(700).fadeOut(1);
 	    $('.buddy').find('.status').remove();

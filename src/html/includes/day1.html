@@ -4,11 +4,21 @@
 			<div class="results-date">
 				<p>Day 1 - Sat 21st May 2016</p>
 			</div>
-			<div class="activity-choices">
-				<ul class="clearfix">
-					<li></li>
-					<li></li>
-				</ul>
+			<div class="wrapper">
+				<div class="activity-choices">
+					<div class="masonry">
+					   <div class="item item-md">The must sees</div>
+					   <div class="item item-md">Hidden Eats and Drinks</div>
+					   <div class="item item-lg">Get cultural</div>
+					   <div class="item item-md">Fashion Fantastic</div>
+					   <div class="item item-md">Survenir Shopping</div>
+					   <div class="item item-md">The must sees</div>
+					   <div class="item item-md">Hidden Eats and Drinks</div>
+					   <div class="item item-md">Get cultural</div>
+					   <div class="item item-md">Fashion Fantastic</div>
+					   <div class="item item-md">Survenir Shopping</div>
+					</div>
+				</div>
 			</div>
 			<p class="ctr-container">
 				<button class="btn ctrl-btn ctrl-prev">Previous screen</button>
@@ -17,3 +27,46 @@
 		</div>
 	</div>
 </section>
+<script>
+	$(function(){
+		$('.activity-choices .item').click(function(){
+			$(this).toggleClass('selected');
+		});
+	})
+</script>
+<style>
+.wrapper {
+    width: 95%;
+    margin: 3em auto;
+}
+
+.masonry {
+    margin: 1.5em 0;
+    padding: 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
+    font-size: .85em;
+}
+
+.item {
+    display: inline-block;
+    background: #fff;
+    margin: 0 0 1.5em;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 2px solid #fff;
+    float: left;
+    width: 45%;
+    margin-left: 5%;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+.selected {
+	border: 2px solid pink;
+}
+</style>
